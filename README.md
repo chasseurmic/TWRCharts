@@ -7,11 +7,11 @@ An Obj-C wrapper for ChartJS. Easily build animated charts by leveraging the pow
 
 TWRCharts is yet another charting library for iOS. TWRCharts is basically an effort to port the famous ChartJS Javascript library to native Obj-C code; its power lies in the fact that it gives developers the flexibility to choose between loading a ChartJS Javascript file (more on this later) into a TWRChartView, or using native methods to build either a line / bar or circular (pie / doughnut) chart.
 
-Loading the chart from a Javascript file is very easy though little configurable and dynamic, whereas by using the native extension the user can update and refresh data on the fly.
+Loading the chart from a Javascript file is very easy though little configurable and dynamic, whereas by using the native extension the user can update and refresh data on the fly. The final choice is up to you!
 
 Native code API does not yet support all type of charts provided by ChartJS; only line, bars, pies and doughnuts are currently available.
 
-TWRCharts's main class is ```TWRChartView```, a subclass of ```UIWebView``` backed by an HTML file that the user never has to deal with. The API has been engineered to make it feel like a fully native experience, both from a developer as an end user point of view.
+TWRCharts's main class is ```TWRChartView```, a subclass of ```UIWebView``` backed by an HTML file that the user never has to deal with. The API has been engineered to make it feel like a fully native experience, both from a developer and an end user point of view.
 
 [![TWRCharts Demo](http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/twrcharts_screen.png)](http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/TWRChartsDemoScreencast.mp4)
 
@@ -107,10 +107,12 @@ TWRDataSet *dataSet2 = [[TWRDataSet alloc] initWithDataPoints:@[@5, @10, @5, @15
 
 NSArray *labels = @[@"A", @"B", @"C", @"D", @"E"];
 
+// Instantiate the chart object
 TWRLineChart *line = [[TWRLineChart alloc] initWithLabels:labels
                                                  dataSets:@[dataSet1, dataSet2]
                                                  animated:NO];
-// Load data
+                                                 
+// Load the chart object onto the view
 [_chartView loadLineChart:line];
 ```
 
