@@ -32,6 +32,8 @@ Native code API does not yet support all type of charts provided by ChartJS; onl
 
 TWRCharts's main class is TWRChartView, a subclass of UIWebView backed by an HTML file that the user never has to deal with. The API has been engineered to make it feel like a fully native experience, both from a developer as an end user point of view.
 
+[![TWRCharts Demo](http://dropzone-michelangelo.s3.amazonaws.com/twrcharts_screenshot.jpg)](http://dropzone-michelangelo.s3.amazonaws.com/TWRChartsDemoScreencast.mp4)
+
 ### Loading a chart from a JS file
 
 Drop in your Xcode project a .js file and make sure it's been added to the resources that are being bundled with the project in the build phases of your project.
@@ -46,7 +48,7 @@ NSString *jsFilePath = [[NSBundle mainBundle] pathForResource:@"file" ofType:@"j
 [self.view addSubview:_chartView];
 ```
 
-You can use any of the chart types currently supported by [ChartJS](). Here's an example of how you would load a Polar Chart.
+You can use any of the chart types currently supported by [ChartJS](http://www.chartjs.org). Here's an example of how you would load a Polar Chart.
 
 ```js
 var context = document.getElementById("canvas").getContext("2d");
