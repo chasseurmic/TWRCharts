@@ -36,7 +36,7 @@ Next, import the header file wherever you want to use the custom view:
 
 ### Creating the chart view
 
-Just declare a ```TWRChartView``` property in your header file and instantiate it as you would a normal view by defining its frame rect. Then just add it to your controller's view hierarchy.
+Just declare a ```TWRChartView``` property in your header file and instantiate it as you would do with a normal view by defining its frame rect. Then just add it to your controller's view hierarchy.
 
 ```objc
 // Chart View
