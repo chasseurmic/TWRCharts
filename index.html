@@ -28,37 +28,199 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+          <h1>
+<a name="twrcharts" class="anchor" href="#twrcharts"><span class="octicon octicon-link"></span></a>TWRCharts</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h2>
+<a name="twrcharts-1" class="anchor" href="#twrcharts-1"><span class="octicon octicon-link"></span></a>TWRCharts</h2>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p>An Obj-C wrapper for ChartJS. Easily build animated charts by leveraging the power of native code.</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>TWRCharts is yet another charting library for iOS. TWRCharts is basically an effort to port the famous ChartJS Javascript library to native Obj-C code; its power lies in the fact that it gives developers the flexibility to choose between loading a ChartJS Javascript file (more on this later) into a TWRChartView, or using native methods to build either a line / bar or circular (pie / doughnut) chart.</p>
+
+<p>Loading the chart from a Javascript file is very easy though little configurable and dynamic, whereas by using the native extension the user can update and refresh data on the fly. The final choice is up to you!</p>
+
+<p>Native code API does not yet support all type of charts provided by ChartJS; only line, bars, pies and doughnuts are currently available.</p>
+
+<p>TWRCharts's main class is <code>TWRChartView</code>, a subclass of <code>UIWebView</code> backed by an HTML file that the user never has to deal with. The API has been engineered to make it feel like a fully native experience, both from a developer and an end user point of view.</p>
+
+<p><a href="http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/TWRChartsDemoScreencast.mp4"><img src="http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/twrcharts_screen.png" alt="TWRCharts Demo"></a></p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Usage is easy.</p>
+
+<p>Add the dependency to your <code>Podfile</code>:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="n">platform</span> <span class="ss">:ios</span>
+<span class="n">pod</span> <span class="s1">'TWRChart'</span>
+</pre></div>
+
+<p>Run <code>pod install</code> to install the dependencies.</p>
+
+<p>Next, import the header file wherever you want to use the custom view:</p>
+
+<div class="highlight highlight-objc"><pre><span class="cp">#import &lt;TWRCharts/TWRChart.h&gt;</span>
+</pre></div>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="creating-the-chart-view" class="anchor" href="#creating-the-chart-view"><span class="octicon octicon-link"></span></a>Creating the chart view</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Just declare a <code>TWRChartView</code> property in your header file and instantiate it as you would do with a normal view by defining its frame rect. Then just add it to your controller's view hierarchy.</p>
+
+<div class="highlight highlight-objc"><pre><span class="c1">// Chart View</span>
+<span class="n">_chartView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TWRChartView</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithFrame</span><span class="o">:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">320</span><span class="p">,</span> <span class="mi">300</span><span class="p">)];</span>
+
+<span class="c1">// Optionally assign here a JS file (see below)</span>
+
+<span class="c1">// Add the chart view to the controller's view</span>
+<span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span> <span class="n">addSubview</span><span class="o">:</span><span class="n">_chartView</span><span class="p">];</span>
+</pre></div>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a name="loading-a-chart-from-a-js-file" class="anchor" href="#loading-a-chart-from-a-js-file"><span class="octicon octicon-link"></span></a>Loading a chart from a JS file</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Drop in your Xcode project a .js file and make sure it's been added to the resources that are being bundled with the project in the build phases of your project.</p>
+
+<p>Then just get a handle on the file and set its path to the TWRChartView that's being added to the controller's view.</p>
+
+<div class="highlight highlight-objc"><pre><span class="n">NSString</span> <span class="o">*</span><span class="n">jsFilePath</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="n">pathForResource</span><span class="o">:</span><span class="s">@"file"</span> <span class="n">ofType</span><span class="o">:</span><span class="s">@"js"</span><span class="p">];</span>
+<span class="p">[</span><span class="n">_chartView</span> <span class="n">setChartJsFilePath</span><span class="o">:</span><span class="n">jsFilePath</span><span class="p">];</span>
+</pre></div>
+
+<p>You can use any of the chart types currently supported by <a href="http://www.chartjs.org">ChartJS</a>. Here's an example of how you would load a Polar Chart.</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"canvas"</span><span class="p">).</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">"2d"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">polarData</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nx">value</span> <span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+        <span class="nx">color</span><span class="o">:</span> <span class="s2">"#D97041"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">value</span> <span class="o">:</span> <span class="mi">90</span><span class="p">,</span>
+        <span class="nx">color</span><span class="o">:</span> <span class="s2">"#C7604C"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">value</span> <span class="o">:</span> <span class="mi">24</span><span class="p">,</span>
+        <span class="nx">color</span><span class="o">:</span> <span class="s2">"#21323D"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">value</span> <span class="o">:</span> <span class="mi">58</span><span class="p">,</span>
+        <span class="nx">color</span><span class="o">:</span> <span class="s2">"#9D9B7F"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">value</span> <span class="o">:</span> <span class="mi">82</span><span class="p">,</span>
+        <span class="nx">color</span><span class="o">:</span> <span class="s2">"#7D4F6D"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nx">value</span> <span class="o">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="nx">color</span><span class="o">:</span> <span class="s2">"#584A5E"</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+
+<span class="kd">var</span> <span class="nx">polarArea</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Chart</span><span class="p">(</span><span class="nx">context</span><span class="p">).</span><span class="nx">PolarArea</span><span class="p">(</span><span class="nx">polarData</span><span class="p">);</span>
+</pre></div>
+
+<p>If you're planning on to use JS files to load your charts, be sure to make the following as the first line of your <em>.js</em> file:</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"canvas"</span><span class="p">).</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">"2d"</span><span class="p">);</span>
+</pre></div>
+
+<p>This code retrieves the correct context from the HTML file that backs the TWRChartView.</p>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="loading-a-chart-using-native-obj-c-code" class="anchor" href="#loading-a-chart-using-native-obj-c-code"><span class="octicon octicon-link"></span></a>Loading a chart using native Obj-C code</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>Depending on the type of chart you want to plot (bar / line / pie...) you need to instantiate different objects, but mainly you need to follow these steps:</p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<ul>
+<li>Instantiate data objects;</li>
+<li>Instantiate a chart object by passing the data objects along with labels;</li>
+<li>Load the chart object onto the chart view.</li>
+</ul><p>Here's some example code:</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<div class="highlight highlight-objc"><pre><span class="c1">// Build chart data</span>
+<span class="n">TWRDataSet</span> <span class="o">*</span><span class="n">dataSet1</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TWRDataSet</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithDataPoints</span><span class="o">:</span><span class="p">@[</span><span class="mi">@10</span><span class="p">,</span> <span class="mi">@15</span><span class="p">,</span> <span class="mi">@5</span><span class="p">,</span> <span class="mi">@15</span><span class="p">,</span> <span class="mi">@5</span><span class="p">]];</span>
+<span class="n">TWRDataSet</span> <span class="o">*</span><span class="n">dataSet2</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TWRDataSet</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithDataPoints</span><span class="o">:</span><span class="p">@[</span><span class="mi">@5</span><span class="p">,</span> <span class="mi">@10</span><span class="p">,</span> <span class="mi">@5</span><span class="p">,</span> <span class="mi">@15</span><span class="p">,</span> <span class="mi">@10</span><span class="p">]];</span>
+
+<span class="n">NSArray</span> <span class="o">*</span><span class="n">labels</span> <span class="o">=</span> <span class="p">@[</span><span class="s">@"A"</span><span class="p">,</span> <span class="s">@"B"</span><span class="p">,</span> <span class="s">@"C"</span><span class="p">,</span> <span class="s">@"D"</span><span class="p">,</span> <span class="s">@"E"</span><span class="p">];</span>
+
+<span class="c1">// Instantiate the chart object</span>
+<span class="n">TWRLineChart</span> <span class="o">*</span><span class="n">line</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TWRLineChart</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">initWithLabels</span><span class="o">:</span><span class="n">labels</span>
+                                                 <span class="nl">dataSets:</span><span class="p">@[</span><span class="n">dataSet1</span><span class="p">,</span> <span class="n">dataSet2</span><span class="p">]</span>
+                                                 <span class="nl">animated:</span><span class="nb">NO</span><span class="p">];</span>
+
+<span class="c1">// Load the chart object onto the view</span>
+<span class="p">[</span><span class="n">_chartView</span> <span class="n">loadLineChart</span><span class="o">:</span><span class="n">line</span><span class="p">];</span>
+</pre></div>
+
+<h4>
+<a name="data-sets" class="anchor" href="#data-sets"><span class="octicon octicon-link"></span></a>Data Sets</h4>
+
+<p>TWRDataSet (which represents the data for bar and line charts) can be instantiated with the following <em>init</em> method:</p>
+
+<div class="highlight highlight-objc"><pre><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDataPoints:</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">dataPoints</span>
+                         <span class="nl">fillColor:</span><span class="p">(</span><span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">fillColor</span>
+                       <span class="nl">strokeColor:</span><span class="p">(</span><span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">strokeColor</span>
+                        <span class="nl">pointColor:</span><span class="p">(</span><span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">pointColor</span>
+                  <span class="nl">pointStrokeColor:</span><span class="p">(</span><span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">pointStrokeColor</span><span class="p">;</span>
+</pre></div>
+
+<p>You can customize the fill and stroke colors for either the bar or the line chart. For the latter one you can also choose the point fill and point stroke colors.</p>
+
+<p>At a minimum you have to provide the data points, which is an array of NSNumbers.</p>
+
+<h4>
+<a name="line--bar-charts" class="anchor" href="#line--bar-charts"><span class="octicon octicon-link"></span></a>Line / Bar Charts</h4>
+
+<p>Line and bar charts can be instantiated as such:</p>
+
+<div class="highlight highlight-objc"><pre><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithLabels:</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">labels</span>
+                      <span class="nl">dataSets:</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">dataSets</span>
+                      <span class="nl">animated:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">animated</span><span class="p">;</span>
+</pre></div>
+
+<p>When passing the chart objects to the chart view, you need to call one of the following methods called on your instance of <code>TWRChartView</code> according to the type of object you are dealing with:</p>
+
+<div class="highlight highlight-objc"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadBarChart:</span><span class="p">(</span><span class="n">TWRBarChart</span> <span class="o">*</span><span class="p">)</span><span class="nv">barChart</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadLineChart:</span><span class="p">(</span><span class="n">TWRLineChart</span> <span class="o">*</span><span class="p">)</span><span class="nv">lineChart</span><span class="p">;</span>
+</pre></div>
+
+<p>A sweet final touch: you even have an option to call the above methods with a completion handler to get a callback whenever the chart animation finishes. You wouldn't even guess that there's a bunch of Javascript code running underneath!</p>
+
+<div class="highlight highlight-objc"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadBarChart:</span><span class="p">(</span><span class="n">TWRBarChart</span> <span class="o">*</span><span class="p">)</span><span class="nv">barChart</span> <span class="nf">withCompletionHandler:</span><span class="p">(</span><span class="n">TWRAnimationCompletionBlock</span><span class="p">)</span><span class="nv">block</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadLineChart:</span><span class="p">(</span><span class="n">TWRLineChart</span> <span class="o">*</span><span class="p">)</span><span class="nv">lineChart</span> <span class="nf">withCompletionHandler:</span><span class="p">(</span><span class="n">TWRAnimationCompletionBlock</span><span class="p">)</span><span class="nv">block</span><span class="p">;</span>
+</pre></div>
+
+<h4>
+<a name="circular-charts" class="anchor" href="#circular-charts"><span class="octicon octicon-link"></span></a>Circular Charts</h4>
+
+<p>And finally, circular charts can be instantiated with the following method:</p>
+
+<div class="highlight highlight-objc"><pre><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithValues:</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">values</span>
+                        <span class="nl">colors:</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">colors</span>
+                          <span class="nl">type:</span><span class="p">(</span><span class="n">TWRCircularChartType</span><span class="p">)</span><span class="nv">type</span>
+                      <span class="nl">animated:</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nv">animated</span><span class="p">;</span>
+</pre></div>
+
+<p>You even get a chance to choose the chart type, either a pie chart (TWRCircularChartTypePie) or a doughnut (TWRCircularChartTypeDoughnut).</p>
+
+<p>And again, once you have the chart object, you can add it to the chart view with one of the following two methods called on your instance of <code>TWRChartView</code>:</p>
+
+<div class="highlight highlight-objc"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadCircularChart:</span><span class="p">(</span><span class="n">TWRCircularChart</span> <span class="o">*</span><span class="p">)</span><span class="nv">circularChart</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadCircularChart:</span><span class="p">(</span><span class="n">TWRCircularChart</span> <span class="o">*</span><span class="p">)</span><span class="nv">circularChart</span> <span class="nf">withCompletionHandler:</span><span class="p">(</span><span class="n">TWRAnimationCompletionBlock</span><span class="p">)</span><span class="nv">block</span><span class="p">;</span>
+</pre></div>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p><code>TWRCharts</code> requires iOS 6.x or greater.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Usage is provided under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a>.  See LICENSE for the full details.</p>
         </section>
 
         <aside id="sidebar">
