@@ -5,6 +5,16 @@ TWRCharts
 
 An Obj-C wrapper for ChartJS. Easily build animated charts by leveraging the power of native code.
 
+TWRCharts is yet another charting library for iOS. TWRCharts is basically an effort to port the famous ChartJS Javascript library to native Obj-C code; its power lies in the fact that it gives developers the flexibility to choose between loading a ChartJS Javascript file (more on this later) into a TWRChartView, or using native methods to build either a line / bar or circular (pie / doughnut) chart.
+
+Loading the chart from a Javascript file is very easy though little configurable and dynamic, whereas by using the native extension the user can update and refresh data on the fly.
+
+Native code API does not yet support all type of charts provided by ChartJS; only line, bars, pies and doughnuts are currently available.
+
+TWRCharts's main class is ```TWRChartView```, a subclass of ```UIWebView``` backed by an HTML file that the user never has to deal with. The API has been engineered to make it feel like a fully native experience, both from a developer as an end user point of view.
+
+[![TWRCharts Demo](http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/twrcharts_screen.png)](http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/TWRChartsDemoScreencast.mp4)
+
 ## Usage
 
 Usage is easy.
@@ -23,16 +33,6 @@ Next, import the header file wherever you want to use the custom view:
 ```objc
 #import <TWRCharts/TWRChart.h>
 ```
-
-TWRCharts is yet another charting library for iOS. TWRCharts is basically an effort to port the famous ChartJS Javascript library to native Obj-C code; its power lies in the fact that it gives developers the flexibility to choose between loading a ChartJS Javascript file (more on this later) into a TWRChartView, or using native methods to build either a line / bar or circular (pie / doughnut) chart. 
-
-Loading the chart from a Javascript file is very easy though little configurable and dynamic, whereas by using the native extension the user can update and refresh data on the fly. 
-
-Native code API does not yet support all type of charts provided by ChartJS; only line, bars, pies and doughnuts are currently available.
-
-TWRCharts's main class is TWRChartView, a subclass of UIWebView backed by an HTML file that the user never has to deal with. The API has been engineered to make it feel like a fully native experience, both from a developer as an end user point of view.
-
-[![TWRCharts Demo](http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/twrcharts_screen.png)](http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/TWRChartsDemoScreencast.mp4)
 
 ### Loading a chart from a JS file
 
