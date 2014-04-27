@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>00E03A49-C07C-4535-B4BA-A21B8C0ABA6D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ChartJS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D9970D84-C374-4B68-ADD9-3F22B8947B4D</key>
+		<string>https://github.com/chasseurmic/TWRCharts.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TWRChartsDemo/ChartJS.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D9970D84-C374-4B68-ADD9-3F22B8947B4D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chasseurmic/TWRCharts.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D9970D84-C374-4B68-ADD9-3F22B8947B4D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D9970D84-C374-4B68-ADD9-3F22B8947B4D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TWRCharts</string>
+		</dict>
+	</array>
+</dict>
+</plist>

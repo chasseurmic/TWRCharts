@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15423D7A1907115100E9EDB9 /* TWRBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 15423D791907115100E9EDB9 /* TWRBarChart.m */; };
-		15423D8019071B9F00E9EDB9 /* TWRDataSet+Strings.m in Sources */ = {isa = PBXBuildFile; fileRef = 15423D7F19071B9F00E9EDB9 /* TWRDataSet+Strings.m */; };
-		15423D8419071C9B00E9EDB9 /* TWRCircularChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 15423D8319071C9B00E9EDB9 /* TWRCircularChart.m */; };
 		156FFB4E1905956F00DF7D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FFB4D1905956F00DF7D3F /* Foundation.framework */; };
 		156FFB501905956F00DF7D3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FFB4F1905956F00DF7D3F /* CoreGraphics.framework */; };
 		156FFB521905956F00DF7D3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FFB511905956F00DF7D3F /* UIKit.framework */; };
@@ -24,16 +21,18 @@
 		156FFB6F1905957000DF7D3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FFB511905956F00DF7D3F /* UIKit.framework */; };
 		156FFB771905957000DF7D3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 156FFB751905957000DF7D3F /* InfoPlist.strings */; };
 		156FFB791905957000DF7D3F /* ChartJSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FFB781905957000DF7D3F /* ChartJSTests.m */; };
-		156FFB8B190596A900DF7D3F /* Chart.js in Sources */ = {isa = PBXBuildFile; fileRef = 156FFB82190596A900DF7D3F /* Chart.js */; };
-		157A242F1905BC9800BB3BAC /* TWRChartBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A242E1905BC9800BB3BAC /* TWRChartBuilder.m */; };
-		157A24321905BCAD00BB3BAC /* TWRChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 157A24311905BCAD00BB3BAC /* TWRChartView.m */; };
-		157CF6231905C68600442DFA /* TWRLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 157CF6221905C68600442DFA /* TWRLineChart.m */; };
-		157CF6261905C6E100442DFA /* TWRDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 157CF6251905C6E100442DFA /* TWRDataSet.m */; };
-		1587F349190722CF005B0AF1 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1587F348190722CF005B0AF1 /* UIColor+HexString.m */; };
-		1588B7B61905993800ED1D1B /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 1588B7B51905993800ED1D1B /* index.html */; };
-		1588B7B719059CDB00ED1D1B /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = 156FFB82190596A900DF7D3F /* Chart.js */; };
 		1588B7B91905B40B00ED1D1B /* index.js in Sources */ = {isa = PBXBuildFile; fileRef = 1588B7B81905B40B00ED1D1B /* index.js */; };
 		1588B7BA1905B41A00ED1D1B /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 1588B7B81905B40B00ED1D1B /* index.js */; };
+		15D1CB01190D6BB4004F64BE /* Chart.js in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAEE190D6BB4004F64BE /* Chart.js */; };
+		15D1CB02190D6BB4004F64BE /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 15D1CAEF190D6BB4004F64BE /* index.html */; };
+		15D1CB03190D6BB4004F64BE /* TWRBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAF1190D6BB4004F64BE /* TWRBarChart.m */; };
+		15D1CB04190D6BB4004F64BE /* TWRChartBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAF4190D6BB4004F64BE /* TWRChartBuilder.m */; };
+		15D1CB05190D6BB4004F64BE /* TWRChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAF6190D6BB4004F64BE /* TWRChartView.m */; };
+		15D1CB06190D6BB4004F64BE /* TWRCircularChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAF8190D6BB4004F64BE /* TWRCircularChart.m */; };
+		15D1CB07190D6BB4004F64BE /* TWRDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAFA190D6BB4004F64BE /* TWRDataSet.m */; };
+		15D1CB08190D6BB4004F64BE /* TWRDataSet+Strings.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAFC190D6BB4004F64BE /* TWRDataSet+Strings.m */; };
+		15D1CB09190D6BB4004F64BE /* TWRLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAFE190D6BB4004F64BE /* TWRLineChart.m */; };
+		15D1CB0A190D6BB4004F64BE /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CB00190D6BB4004F64BE /* UIColor+HexString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		15423D781907115100E9EDB9 /* TWRBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRBarChart.h; sourceTree = "<group>"; };
-		15423D791907115100E9EDB9 /* TWRBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRBarChart.m; sourceTree = "<group>"; };
-		15423D7E19071B9F00E9EDB9 /* TWRDataSet+Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TWRDataSet+Strings.h"; sourceTree = "<group>"; };
-		15423D7F19071B9F00E9EDB9 /* TWRDataSet+Strings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TWRDataSet+Strings.m"; sourceTree = "<group>"; };
-		15423D8219071C9B00E9EDB9 /* TWRCircularChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRCircularChart.h; sourceTree = "<group>"; };
-		15423D8319071C9B00E9EDB9 /* TWRCircularChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRCircularChart.m; sourceTree = "<group>"; };
 		156FFB4A1905956F00DF7D3F /* ChartJS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartJS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		156FFB4D1905956F00DF7D3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		156FFB4F1905956F00DF7D3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,20 +65,26 @@
 		156FFB741905957000DF7D3F /* ChartJSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChartJSTests-Info.plist"; sourceTree = "<group>"; };
 		156FFB761905957000DF7D3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		156FFB781905957000DF7D3F /* ChartJSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartJSTests.m; sourceTree = "<group>"; };
-		156FFB82190596A900DF7D3F /* Chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.js; sourceTree = "<group>"; };
-		157A242D1905BC9800BB3BAC /* TWRChartBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRChartBuilder.h; sourceTree = "<group>"; };
-		157A242E1905BC9800BB3BAC /* TWRChartBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRChartBuilder.m; sourceTree = "<group>"; };
-		157A24301905BCAD00BB3BAC /* TWRChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRChartView.h; sourceTree = "<group>"; };
-		157A24311905BCAD00BB3BAC /* TWRChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRChartView.m; sourceTree = "<group>"; };
-		157CF6211905C68600442DFA /* TWRLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRLineChart.h; sourceTree = "<group>"; };
-		157CF6221905C68600442DFA /* TWRLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRLineChart.m; sourceTree = "<group>"; };
-		157CF6241905C6E100442DFA /* TWRDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWRDataSet.h; sourceTree = "<group>"; };
-		157CF6251905C6E100442DFA /* TWRDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWRDataSet.m; sourceTree = "<group>"; };
-		1587F347190722CF005B0AF1 /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
-		1587F348190722CF005B0AF1 /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
-		1587F34A1907C2D0005B0AF1 /* TWRChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWRChart.h; sourceTree = "<group>"; };
-		1588B7B51905993800ED1D1B /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		1588B7B81905B40B00ED1D1B /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		15D1CAEE190D6BB4004F64BE /* Chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = Chart.js; path = ../../TWRCharts/Chart.js; sourceTree = "<group>"; };
+		15D1CAEF190D6BB4004F64BE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../TWRCharts/index.html; sourceTree = "<group>"; };
+		15D1CAF0190D6BB4004F64BE /* TWRBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRBarChart.h; path = ../../TWRCharts/TWRBarChart.h; sourceTree = "<group>"; };
+		15D1CAF1190D6BB4004F64BE /* TWRBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWRBarChart.m; path = ../../TWRCharts/TWRBarChart.m; sourceTree = "<group>"; };
+		15D1CAF2190D6BB4004F64BE /* TWRChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRChart.h; path = ../../TWRCharts/TWRChart.h; sourceTree = "<group>"; };
+		15D1CAF3190D6BB4004F64BE /* TWRChartBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRChartBuilder.h; path = ../../TWRCharts/TWRChartBuilder.h; sourceTree = "<group>"; };
+		15D1CAF4190D6BB4004F64BE /* TWRChartBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWRChartBuilder.m; path = ../../TWRCharts/TWRChartBuilder.m; sourceTree = "<group>"; };
+		15D1CAF5190D6BB4004F64BE /* TWRChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRChartView.h; path = ../../TWRCharts/TWRChartView.h; sourceTree = "<group>"; };
+		15D1CAF6190D6BB4004F64BE /* TWRChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWRChartView.m; path = ../../TWRCharts/TWRChartView.m; sourceTree = "<group>"; };
+		15D1CAF7190D6BB4004F64BE /* TWRCircularChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRCircularChart.h; path = ../../TWRCharts/TWRCircularChart.h; sourceTree = "<group>"; };
+		15D1CAF8190D6BB4004F64BE /* TWRCircularChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWRCircularChart.m; path = ../../TWRCharts/TWRCircularChart.m; sourceTree = "<group>"; };
+		15D1CAF9190D6BB4004F64BE /* TWRDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRDataSet.h; path = ../../TWRCharts/TWRDataSet.h; sourceTree = "<group>"; };
+		15D1CAFA190D6BB4004F64BE /* TWRDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWRDataSet.m; path = ../../TWRCharts/TWRDataSet.m; sourceTree = "<group>"; };
+		15D1CAFB190D6BB4004F64BE /* TWRDataSet+Strings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TWRDataSet+Strings.h"; path = "../../TWRCharts/TWRDataSet+Strings.h"; sourceTree = "<group>"; };
+		15D1CAFC190D6BB4004F64BE /* TWRDataSet+Strings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TWRDataSet+Strings.m"; path = "../../TWRCharts/TWRDataSet+Strings.m"; sourceTree = "<group>"; };
+		15D1CAFD190D6BB4004F64BE /* TWRLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRLineChart.h; path = ../../TWRCharts/TWRLineChart.h; sourceTree = "<group>"; };
+		15D1CAFE190D6BB4004F64BE /* TWRLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWRLineChart.m; path = ../../TWRCharts/TWRLineChart.m; sourceTree = "<group>"; };
+		15D1CAFF190D6BB4004F64BE /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexString.h"; path = "../../TWRCharts/UIColor+HexString.h"; sourceTree = "<group>"; };
+		15D1CB00190D6BB4004F64BE /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "../../TWRCharts/UIColor+HexString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,19 +111,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15423D8119071C3900E9EDB9 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				157A242D1905BC9800BB3BAC /* TWRChartBuilder.h */,
-				157A242E1905BC9800BB3BAC /* TWRChartBuilder.m */,
-				15423D7E19071B9F00E9EDB9 /* TWRDataSet+Strings.h */,
-				15423D7F19071B9F00E9EDB9 /* TWRDataSet+Strings.m */,
-				1587F347190722CF005B0AF1 /* UIColor+HexString.h */,
-				1587F348190722CF005B0AF1 /* UIColor+HexString.m */,
-			);
-			name = Private;
-			sourceTree = "<group>";
-		};
 		156FFB411905956F00DF7D3F = {
 			isa = PBXGroup;
 			children = (
@@ -173,9 +159,7 @@
 		156FFB541905956F00DF7D3F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1588B7B51905993800ED1D1B /* index.html */,
 				1588B7B81905B40B00ED1D1B /* index.js */,
-				156FFB82190596A900DF7D3F /* Chart.js */,
 				156FFB551905956F00DF7D3F /* ChartJS-Info.plist */,
 				156FFB561905956F00DF7D3F /* InfoPlist.strings */,
 				156FFB591905956F00DF7D3F /* main.m */,
@@ -205,18 +189,25 @@
 		157CF6201905C67100442DFA /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				1587F34A1907C2D0005B0AF1 /* TWRChart.h */,
-				15423D8119071C3900E9EDB9 /* Private */,
-				157A24301905BCAD00BB3BAC /* TWRChartView.h */,
-				157A24311905BCAD00BB3BAC /* TWRChartView.m */,
-				157CF6211905C68600442DFA /* TWRLineChart.h */,
-				157CF6221905C68600442DFA /* TWRLineChart.m */,
-				157CF6241905C6E100442DFA /* TWRDataSet.h */,
-				157CF6251905C6E100442DFA /* TWRDataSet.m */,
-				15423D781907115100E9EDB9 /* TWRBarChart.h */,
-				15423D791907115100E9EDB9 /* TWRBarChart.m */,
-				15423D8219071C9B00E9EDB9 /* TWRCircularChart.h */,
-				15423D8319071C9B00E9EDB9 /* TWRCircularChart.m */,
+				15D1CAEE190D6BB4004F64BE /* Chart.js */,
+				15D1CAEF190D6BB4004F64BE /* index.html */,
+				15D1CAF0190D6BB4004F64BE /* TWRBarChart.h */,
+				15D1CAF1190D6BB4004F64BE /* TWRBarChart.m */,
+				15D1CAF2190D6BB4004F64BE /* TWRChart.h */,
+				15D1CAF3190D6BB4004F64BE /* TWRChartBuilder.h */,
+				15D1CAF4190D6BB4004F64BE /* TWRChartBuilder.m */,
+				15D1CAF5190D6BB4004F64BE /* TWRChartView.h */,
+				15D1CAF6190D6BB4004F64BE /* TWRChartView.m */,
+				15D1CAF7190D6BB4004F64BE /* TWRCircularChart.h */,
+				15D1CAF8190D6BB4004F64BE /* TWRCircularChart.m */,
+				15D1CAF9190D6BB4004F64BE /* TWRDataSet.h */,
+				15D1CAFA190D6BB4004F64BE /* TWRDataSet.m */,
+				15D1CAFB190D6BB4004F64BE /* TWRDataSet+Strings.h */,
+				15D1CAFC190D6BB4004F64BE /* TWRDataSet+Strings.m */,
+				15D1CAFD190D6BB4004F64BE /* TWRLineChart.h */,
+				15D1CAFE190D6BB4004F64BE /* TWRLineChart.m */,
+				15D1CAFF190D6BB4004F64BE /* UIColor+HexString.h */,
+				15D1CB00190D6BB4004F64BE /* UIColor+HexString.m */,
 			);
 			name = Charts;
 			sourceTree = "<group>";
@@ -298,11 +289,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D1CB02190D6BB4004F64BE /* index.html in Resources */,
 				1588B7BA1905B41A00ED1D1B /* index.js in Resources */,
-				1588B7B719059CDB00ED1D1B /* Chart.js in Resources */,
 				156FFB661905956F00DF7D3F /* Images.xcassets in Resources */,
 				156FFB581905956F00DF7D3F /* InfoPlist.strings in Resources */,
-				1588B7B61905993800ED1D1B /* index.html in Resources */,
 				156FFB611905956F00DF7D3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,19 +312,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				157CF6231905C68600442DFA /* TWRLineChart.m in Sources */,
+				15D1CB09190D6BB4004F64BE /* TWRLineChart.m in Sources */,
 				1588B7B91905B40B00ED1D1B /* index.js in Sources */,
 				156FFB641905956F00DF7D3F /* TWRViewController.m in Sources */,
-				157A24321905BCAD00BB3BAC /* TWRChartView.m in Sources */,
-				157A242F1905BC9800BB3BAC /* TWRChartBuilder.m in Sources */,
-				15423D8419071C9B00E9EDB9 /* TWRCircularChart.m in Sources */,
-				156FFB8B190596A900DF7D3F /* Chart.js in Sources */,
-				15423D7A1907115100E9EDB9 /* TWRBarChart.m in Sources */,
-				15423D8019071B9F00E9EDB9 /* TWRDataSet+Strings.m in Sources */,
+				15D1CB06190D6BB4004F64BE /* TWRCircularChart.m in Sources */,
+				15D1CB03190D6BB4004F64BE /* TWRBarChart.m in Sources */,
+				15D1CB05190D6BB4004F64BE /* TWRChartView.m in Sources */,
+				15D1CB04190D6BB4004F64BE /* TWRChartBuilder.m in Sources */,
+				15D1CB07190D6BB4004F64BE /* TWRDataSet.m in Sources */,
+				15D1CB08190D6BB4004F64BE /* TWRDataSet+Strings.m in Sources */,
+				15D1CB01190D6BB4004F64BE /* Chart.js in Sources */,
 				156FFB5E1905956F00DF7D3F /* TWRAppDelegate.m in Sources */,
-				157CF6261905C6E100442DFA /* TWRDataSet.m in Sources */,
 				156FFB5A1905956F00DF7D3F /* main.m in Sources */,
-				1587F349190722CF005B0AF1 /* UIColor+HexString.m in Sources */,
+				15D1CB0A190D6BB4004F64BE /* UIColor+HexString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

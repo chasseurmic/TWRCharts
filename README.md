@@ -172,12 +172,6 @@ And again, once you have the chart object, you can add it to the chart view with
 - (void)loadCircularChart:(TWRCircularChart *)circularChart withCompletionHandler:(TWRAnimationCompletionBlock)block;
 ```
 
-## Demo
-
-  You can download the demo project to run the example by yourself.
-
-![](http://cocoahunter-blog.s3.amazonaws.com/TWRBorderedView/demo_screenshot.png)
-
 ## Requirements
 
 `TWRCharts` requires iOS 6.x or greater.
