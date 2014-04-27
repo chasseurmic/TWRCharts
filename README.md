@@ -34,6 +34,20 @@ Next, import the header file wherever you want to use the custom view:
 #import <TWRCharts/TWRChart.h>
 ```
 
+### Creating the chart view
+
+Just declare a ```TWRChartView``` property in your header file and instantiate it as you would a normal view by defining its frame rect. Then just add it to your controller's view hierarchy.
+
+```objc
+// Chart View
+_chartView = [[TWRChartView alloc] initWithFrame:CGRectMake(0, 64, 320, 300)];
+
+// Optionally assign here a JS file (see below)
+
+// Add the chart view to the controller's view
+[self.view addSubview:_chartView];
+```
+
 ### Loading a chart from a JS file
 
 Drop in your Xcode project a .js file and make sure it's been added to the resources that are being bundled with the project in the build phases of your project.
@@ -43,9 +57,6 @@ Then just get a handle on the file and set its path to the TWRChartView that's b
 ```objc
 NSString *jsFilePath = [[NSBundle mainBundle] pathForResource:@"file" ofType:@"js"];
 [_chartView setChartJsFilePath:jsFilePath];
-
-// Add the chart view to the controller's view
-[self.view addSubview:_chartView];
 ```
 
 You can use any of the chart types currently supported by [ChartJS](http://www.chartjs.org). Here's an example of how you would load a Polar Chart.
@@ -111,7 +122,7 @@ NSArray *labels = @[@"A", @"B", @"C", @"D", @"E"];
 TWRLineChart *line = [[TWRLineChart alloc] initWithLabels:labels
                                                  dataSets:@[dataSet1, dataSet2]
                                                  animated:NO];
-                                                 
+
 // Load the chart object onto the view
 [_chartView loadLineChart:line];
 ```
