@@ -62,7 +62,9 @@
         [self stringByEvaluatingJavaScriptFromString:_jsFileString];
         [self loadIndex];
     } else {
-        NSException *exception = [NSException exceptionWithName:@"TWRChartInvalicChartElement" reason:@"The element object provided to the chart view is not valid" userInfo:nil];
+        NSException *exception = [NSException exceptionWithName:@"TWRChartInvalicChartElement"
+                                                         reason:@"The element object provided to the chart view is not a valid bar chart."
+                                                       userInfo:nil];
         [exception raise];
     }
 }
@@ -78,7 +80,9 @@
         [self stringByEvaluatingJavaScriptFromString:_jsFileString];
         [self loadIndex];
     } else {
-        NSException *exception = [NSException exceptionWithName:@"TWRChartInvalicChartElement" reason:@"The element object provided to the chart view is not valid" userInfo:nil];
+        NSException *exception = [NSException exceptionWithName:@"TWRChartInvalicChartElement"
+                                                         reason:@"The element object provided to the chart view is not a valid line chart."
+                                                       userInfo:nil];
         [exception raise];
     }
 }
@@ -94,7 +98,9 @@
         [self stringByEvaluatingJavaScriptFromString:_jsFileString];
         [self loadIndex];
     } else {
-        NSException *exception = [NSException exceptionWithName:@"TWRChartInvalicChartElement" reason:@"The element object provided to the chart view is not valid" userInfo:nil];
+        NSException *exception = [NSException exceptionWithName:@"TWRChartInvalicChartElement"
+                                                         reason:@"The element object provided to the chart view is not a valid circular chart."
+                                                       userInfo:nil];
         [exception raise];
     }
 }
@@ -119,13 +125,14 @@
     [self loadHTMLString:htmlString baseURL:[[NSBundle mainBundle] bundleURL]];
 }
 
-#pragma mark - Web View Delegate
+#pragma mark - Web View Delegate methods
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     [self stringByEvaluatingJavaScriptFromString:_jsFileString];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    // Listen for Javasrcipt callback when chart ends animation
     if ( [[[request URL] scheme] isEqualToString:@"callback"] ) {
         if (_block) {
             _block(YES);

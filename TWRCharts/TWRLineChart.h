@@ -15,6 +15,15 @@
 @property (copy, nonatomic) NSMutableArray *dataSets;
 @property (assign, nonatomic) BOOL animated;
 
+/**
+ *  Initializing the Line Chart object
+ *
+ *  @param labels   an NSArray of labels (NSString) to go along with the data
+ *  @param dataSets an NSArray of TWRDataSet objects containing the data to be plotted
+ *  @param animated a BOOL defining whether the chart should be animated or not
+ *
+ *  @return an instance of TWRLineChart
+ */
 - (instancetype)initWithLabels:(NSArray *)labels
                       dataSets:(NSArray *)dataSets
                       animated:(BOOL)animated;
