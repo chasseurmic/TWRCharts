@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1505A3A7191B940300AE92A9 /* chart.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 1505A3A6191B940300AE92A9 /* chart.min.js */; };
 		156FFB4E1905956F00DF7D3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FFB4D1905956F00DF7D3F /* Foundation.framework */; };
 		156FFB501905956F00DF7D3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FFB4F1905956F00DF7D3F /* CoreGraphics.framework */; };
 		156FFB521905956F00DF7D3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FFB511905956F00DF7D3F /* UIKit.framework */; };
@@ -22,8 +21,7 @@
 		156FFB6F1905957000DF7D3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156FFB511905956F00DF7D3F /* UIKit.framework */; };
 		156FFB771905957000DF7D3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 156FFB751905957000DF7D3F /* InfoPlist.strings */; };
 		156FFB791905957000DF7D3F /* ChartJSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 156FFB781905957000DF7D3F /* ChartJSTests.m */; };
-		15737F47191B9A9A00572D8D /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 15D1CAEF190D6BB4004F64BE /* index.html */; };
-		15737F48191B9A9D00572D8D /* chart.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 1505A3A6191B940300AE92A9 /* chart.min.js */; };
+		15737F4A191B9E0600572D8D /* ChartAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15737F49191B9E0600572D8D /* ChartAssets.bundle */; };
 		1588B7BA1905B41A00ED1D1B /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 1588B7B81905B40B00ED1D1B /* index.js */; };
 		15D1CB03190D6BB4004F64BE /* TWRBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAF1190D6BB4004F64BE /* TWRBarChart.m */; };
 		15D1CB04190D6BB4004F64BE /* TWRChartBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D1CAF4190D6BB4004F64BE /* TWRChartBuilder.m */; };
@@ -46,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1505A3A6191B940300AE92A9 /* chart.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = chart.min.js; path = ../../TWRCharts/chart.min.js; sourceTree = "<group>"; };
 		156FFB4A1905956F00DF7D3F /* ChartJS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartJS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		156FFB4D1905956F00DF7D3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		156FFB4F1905956F00DF7D3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,8 +63,8 @@
 		156FFB741905957000DF7D3F /* ChartJSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChartJSTests-Info.plist"; sourceTree = "<group>"; };
 		156FFB761905957000DF7D3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		156FFB781905957000DF7D3F /* ChartJSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartJSTests.m; sourceTree = "<group>"; };
+		15737F49191B9E0600572D8D /* ChartAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChartAssets.bundle; sourceTree = "<group>"; };
 		1588B7B81905B40B00ED1D1B /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
-		15D1CAEF190D6BB4004F64BE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../TWRCharts/index.html; sourceTree = "<group>"; };
 		15D1CAF0190D6BB4004F64BE /* TWRBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRBarChart.h; path = ../../TWRCharts/TWRBarChart.h; sourceTree = "<group>"; };
 		15D1CAF1190D6BB4004F64BE /* TWRBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWRBarChart.m; path = ../../TWRCharts/TWRBarChart.m; sourceTree = "<group>"; };
 		15D1CAF2190D6BB4004F64BE /* TWRChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWRChart.h; path = ../../TWRCharts/TWRChart.h; sourceTree = "<group>"; };
@@ -189,8 +186,7 @@
 		157CF6201905C67100442DFA /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				1505A3A6191B940300AE92A9 /* chart.min.js */,
-				15D1CAEF190D6BB4004F64BE /* index.html */,
+				15737F49191B9E0600572D8D /* ChartAssets.bundle */,
 				15D1CAF0190D6BB4004F64BE /* TWRBarChart.h */,
 				15D1CAF1190D6BB4004F64BE /* TWRBarChart.m */,
 				15D1CAF2190D6BB4004F64BE /* TWRChart.h */,
@@ -290,8 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1588B7BA1905B41A00ED1D1B /* index.js in Resources */,
-				15737F47191B9A9A00572D8D /* index.html in Resources */,
-				15737F48191B9A9D00572D8D /* chart.min.js in Resources */,
+				15737F4A191B9E0600572D8D /* ChartAssets.bundle in Resources */,
 				156FFB661905956F00DF7D3F /* Images.xcassets in Resources */,
 				156FFB581905956F00DF7D3F /* InfoPlist.strings in Resources */,
 				156FFB611905956F00DF7D3F /* Main.storyboard in Resources */,
@@ -324,7 +319,6 @@
 				156FFB5E1905956F00DF7D3F /* TWRAppDelegate.m in Sources */,
 				156FFB5A1905956F00DF7D3F /* main.m in Sources */,
 				15D1CB0A190D6BB4004F64BE /* UIColor+HexString.m in Sources */,
-				1505A3A7191B940300AE92A9 /* chart.min.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
     :git => "https://github.com/chasseurmic/TWRCharts.git",
     :tag => "0.1"
   }
-
+  s.resource_bundle = { 'ChartAssets' => 'TWRCharts/ChartAssets/*.{html,js}' }
   s.platform     = :ios, '6.0'
-  s.source_files = 'TWRCharts/*.{h,m,html,js}'
+  s.source_files = 'TWRCharts/*.{h,m}'
   s.requires_arc = true
 
 end
