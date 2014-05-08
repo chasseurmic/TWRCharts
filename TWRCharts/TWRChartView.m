@@ -41,7 +41,7 @@
     
     // HTML index file
 
-    NSString *htmlFilePath = [[NSBundle mainBundle] pathForResource:@"ChartAssets.bundle/index" ofType:@"html"];
+    NSString *htmlFilePath = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
     _htmlFilePath = htmlFilePath;
     self.userInteractionEnabled = NO;
 }
