@@ -23,7 +23,7 @@ Add the dependency to your `Podfile`:
 
 ```ruby
 platform :ios
-pod 'TWRChart'
+pod 'TWRCharts'
 ```
 
 Run `pod install` to install the dependencies.
