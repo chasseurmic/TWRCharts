@@ -13,7 +13,7 @@ Native code API does not yet support all type of charts provided by ChartJS; onl
 
 TWRCharts's main class is ```TWRChartView```, a subclass of ```UIWebView``` backed by an HTML file that the user never has to deal with. The API has been engineered to make it feel like a fully native experience, both from a developer and an end user point of view.
 
-[![TWRCharts Demo](http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/twrcharts_screen.png)](http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/TWRChartsDemoScreencast.mp4)
+![TWRCharts Demo](http://cocoahunter-blog.s3.amazonaws.com/TWRCharts/twrcharts_optimized.gif)
 
 ## Usage
 
