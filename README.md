@@ -34,6 +34,8 @@ Next, import the header file wherever you want to use the custom view:
 #import <TWRCharts/TWRChart.h>
 ```
 
+In the Xcode target "Build Phases" add the files (index.html and Chart.js) under "Copy Bundle Resources".
+
 ### Creating the chart view
 
 Just declare a ```TWRChartView``` property in your header file and instantiate it as you would do with a normal view by defining its frame rect. Then just add it to your controller's view hierarchy.
