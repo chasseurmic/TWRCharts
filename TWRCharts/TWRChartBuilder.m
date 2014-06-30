@@ -67,7 +67,7 @@
         }
     }];
     
-    retString = [retString stringByAppendingString:[NSString stringWithFormat:@"var options = {animation:%@};", lineChart.animated ? @"true" : @"false"]];
+    retString = [retString stringByAppendingString:[NSString stringWithFormat:@"var options = {animation:%@, bezierCurve :%@};", lineChart.animated ? @"true" : @"false", lineChart.curveLines ? @"true" : @"false"]];
     retString = [retString stringByAppendingString:@"var myLine = new Chart(context).Line(lineChartData,options);"];
     return retString;
 }

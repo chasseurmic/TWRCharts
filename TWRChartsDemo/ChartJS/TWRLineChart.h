@@ -15,6 +15,8 @@
 @property (copy, nonatomic) NSMutableArray *dataSets;
 @property (assign, nonatomic) BOOL animated;
 
+- (instancetype)initWithLabels:(NSArray *)labels dataSets:(NSArray *)dataSets animated:(BOOL)animated;
+
 /**
  *  Initializing the Line Chart object
  *
@@ -26,6 +28,7 @@
  */
 - (instancetype)initWithLabels:(NSArray *)labels
                       dataSets:(NSArray *)dataSets
-                      animated:(BOOL)animated;
+                      animated:(BOOL)animated
+                        curved:(BOOL)curved;
 
 @end
