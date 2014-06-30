@@ -16,6 +16,8 @@
 @property (assign, nonatomic) BOOL animated;
 @property(nonatomic) BOOL curveLines;
 
+- (instancetype)initWithLabels:(NSArray *)labels dataSets:(NSArray *)dataSets animated:(BOOL)animated;
+
 /**
  *  Initializing the Line Chart object
  *
@@ -27,7 +29,8 @@
  */
 - (instancetype)initWithLabels:(NSArray *)labels
                       dataSets:(NSArray *)dataSets
-                      animated:(BOOL)animated;
+                      animated:(BOOL)animated
+                        curved:(BOOL)curved;
 
 /**
  *  Initializing the Line Chart object
