@@ -17,13 +17,24 @@
 - (instancetype)initWithLabels:(NSArray *)labels
                       dataSets:(NSArray *)dataSets
                       animated:(BOOL)animated {
+    return [self initWithLabels:labels dataSets:dataSets animated:animated
+                  curved:YES];
+}
+
+- (instancetype)initWithLabels:(NSArray *)labels
+                      dataSets:(NSArray *)dataSets
+                      animated:(BOOL)animated
+                        curved:(BOOL)curved
+{
     self = [super init];
     if (self) {
         _labels = labels.mutableCopy;
         _dataSets = dataSets.mutableCopy;
         _animated = animated;
+        _curveLines = curved;
     }
     return self;
 }
+
 
 @end
