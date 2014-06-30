@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TWRCharts"
-  s.version      = "0.2"
+  s.version      = "0.3"
   s.summary      = "An Obj-C wrapper for ChartJS. Easily build animated charts by leveraging the power of native code."
   s.homepage     = "https://github.com/chasseurmic/TWRCharts"
 
