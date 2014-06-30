@@ -32,6 +32,29 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if ( self )
+    {
+        [self commonInit];
+    }
+
+    return self;
+}
+
+
+- (id)init
+{
+    self = [super init];
+    if ( self )
+    {
+        [self commonInit];
+    }
+
+    return self;
+}
+
 - (void)commonInit {
     // Setting self as the delegate
     self.delegate = self;
